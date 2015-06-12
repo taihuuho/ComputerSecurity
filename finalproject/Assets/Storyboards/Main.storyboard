@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F1077" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IEn-rp-qpC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+    </dependencies>
+    <scenes>
+        <!--Log in-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="finalproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-7M-Ggo" customClass="AppTextField" customModule="finalproject" customModuleProvider="target">
+                                <rect key="frame" x="227" y="134" width="146" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n6U-fW-ECa"/>
+                                    <constraint firstAttribute="width" constant="146" id="vUE-DH-Vyf"/>
+                                </constraints>
+                                <color key="textColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2fB-u1-fu0"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-X5-hSb" customClass="AppTextField" customModule="finalproject" customModuleProvider="target">
+                                <rect key="frame" x="227" y="174" width="146" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8AN-iZ-HwE"/>
+                                    <constraint firstAttribute="width" constant="146" id="Ttx-Jd-hyd"/>
+                                </constraints>
+                                <color key="textColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0UG-DB-Wfa"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJz-eU-Zke">
+                                <rect key="frame" x="255" y="340" width="90" height="30"/>
+                                <color key="backgroundColor" red="0.050980392156862744" green="0.81176470588235294" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7IX-7p-AIo"/>
+                                    <constraint firstAttribute="width" constant="90" id="kEn-9b-wie"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTouchedOnSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ffU-0A-UzX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yb-q1-cVJ">
+                                <rect key="frame" x="226.5" y="256" width="146" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Sh1-wC-geQ"/>
+                                    <constraint firstAttribute="width" constant="146" id="lsb-i3-DM8"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="HTTPs" image="uncheck.png">
+                                    <color key="titleColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="check.png"/>
+                                <connections>
+                                    <action selector="didTouchedOnCheckButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cNo-XR-IOZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEj-bg-4Qo">
+                                <rect key="frame" x="227" y="293" width="146" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Dat-wC-ioE"/>
+                                    <constraint firstAttribute="width" constant="146" id="QsA-MA-BMB"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="RSA" image="uncheck.png">
+                                    <color key="titleColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="check.png"/>
+                                <connections>
+                                    <action selector="didTouchedOnCheckButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FBB-mH-1a5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aJ-Nx-XZI">
+                                <rect key="frame" x="227" y="219" width="146" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="91h-xe-724"/>
+                                    <constraint firstAttribute="height" constant="32" id="foC-D2-mdm"/>
+                                </constraints>
+                                <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="HTTP" image="uncheck.png">
+                                    <color key="titleColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="check.png"/>
+                                <connections>
+                                    <action selector="didTouchedOnCheckButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BI0-3c-8XS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="zHf-X5-hSb" secondAttribute="centerX" id="8QV-rf-Rnk"/>
+                            <constraint firstItem="zHf-X5-hSb" firstAttribute="top" secondItem="iPc-7M-Ggo" secondAttribute="bottom" constant="10" id="92i-44-0If"/>
+                            <constraint firstAttribute="centerX" secondItem="0yb-q1-cVJ" secondAttribute="centerX" id="Gun-d3-Qma"/>
+                            <constraint firstAttribute="centerX" secondItem="PJz-eU-Zke" secondAttribute="centerX" id="POl-Yt-iZz"/>
+                            <constraint firstItem="PJz-eU-Zke" firstAttribute="top" secondItem="KEj-bg-4Qo" secondAttribute="bottom" constant="15" id="QZp-qG-ata"/>
+                            <constraint firstAttribute="centerX" secondItem="iPc-7M-Ggo" secondAttribute="centerX" id="SNU-iB-znj"/>
+                            <constraint firstItem="0yb-q1-cVJ" firstAttribute="top" secondItem="2aJ-Nx-XZI" secondAttribute="bottom" constant="5" id="iDs-sc-sMj"/>
+                            <constraint firstItem="2aJ-Nx-XZI" firstAttribute="top" secondItem="zHf-X5-hSb" secondAttribute="bottom" constant="15" id="k65-Bl-MJA"/>
+                            <constraint firstAttribute="centerX" secondItem="KEj-bg-4Qo" secondAttribute="centerX" id="lhk-U5-Wc8"/>
+                            <constraint firstItem="iPc-7M-Ggo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="p0T-zv-Ebo"/>
+                            <constraint firstAttribute="centerX" secondItem="2aJ-Nx-XZI" secondAttribute="centerX" id="q8B-ra-4tq"/>
+                            <constraint firstItem="KEj-bg-4Qo" firstAttribute="top" secondItem="0yb-q1-cVJ" secondAttribute="bottom" constant="5" id="vZu-kB-EhR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Log in" id="1ku-je-nTf"/>
+                    <connections>
+                        <outlet property="httpButton" destination="2aJ-Nx-XZI" id="nkF-61-nmW"/>
+                        <outlet property="httpsButton" destination="0yb-q1-cVJ" id="pfa-dT-hAr"/>
+                        <outlet property="rsaButton" destination="KEj-bg-4Qo" id="AOh-eo-dS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="136"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="5yP-RB-Fx9">
+            <objects>
+                <viewController id="YMK-AG-6HQ" customClass="ProfileViewController" customModule="finalproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vpg-ME-LwY"/>
+                        <viewControllerLayoutGuide type="bottom" id="cKw-bV-PMy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5lq-Dz-21I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Gd-ts-bVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="837"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TcC-3M-AhM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IEn-rp-qpC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PwH-9d-jzs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GnK-fc-FgJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bs2-FI-EE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="-557"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="check.png" width="32" height="32"/>
+        <image name="uncheck.png" width="32" height="32"/>
+    </resources>
+</document>
