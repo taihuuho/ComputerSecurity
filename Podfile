@@ -4,6 +4,8 @@
 target 'finalproject' do
 
 pod 'AFNetworking'
+pod 'TYMActivityIndicatorView'
+pod 'ReactiveCocoa'
 
 end
 

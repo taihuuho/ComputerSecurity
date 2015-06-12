@@ -20,11 +20,23 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - TYMActivityIndicatorView (0.3.2)
 
 DEPENDENCIES:
   - AFNetworking
+  - ReactiveCocoa
+  - TYMActivityIndicatorView
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  TYMActivityIndicatorView: 521860f0873be6bf3bbd21ee60d79cdef9f51055
 
 COCOAPODS: 0.36.1
