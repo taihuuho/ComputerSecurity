@@ -83,9 +83,22 @@ class BaseApiClient: AFHTTPRequestOperationManager {
                     
             })
             
-            operation.securityPolicy = AFSecurityPolicy(pinningMode: .PublicKey)
+            operation.securityPolicy = AFSecurityPolicy(pinningMode: .Certificate)
             operation.securityPolicy.allowInvalidCertificates = true
-            
+            operation.setWillSendRequestForAuthenticationChallengeBlock({ (connection : NSURLConnection!, challenge : NSURLAuthenticationChallenge!) -> Void in
+                if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust{
+                    challenge.sender.useCredential(NSURLCredential(forTrust: challenge.protectionSpace.serverTrust), forAuthenticationChallenge: challenge)
+                
+                }else if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodClientCertificate{
+
+                    let credential = Utils.sharedInstance().credentialWithP21File("userA", password: "")
+                    if credential != nil{
+                        challenge.sender.useCredential(credential, forAuthenticationChallenge: challenge)
+                    }else{
+                        challenge.sender.cancelAuthenticationChallenge(challenge)
+                    }
+                }
+            })
             
             self.operationQueue.addOperation(operation);
             

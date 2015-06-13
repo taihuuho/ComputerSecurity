@@ -27,6 +27,7 @@
 		508F64801B2BA1FD003E4376 /* userA.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 508F647B1B2BA1FD003E4376 /* userA.p12 */; };
 		508F64811B2BA1FD003E4376 /* userA.crt in Resources */ = {isa = PBXBuildFile; fileRef = 508F647C1B2BA1FD003E4376 /* userA.crt */; };
 		508F64821B2BA1FD003E4376 /* userA.key in Resources */ = {isa = PBXBuildFile; fileRef = 508F647D1B2BA1FD003E4376 /* userA.key */; };
+		508F64861B2BC50F003E4376 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 508F64851B2BC50F003E4376 /* Utils.m */; };
 		50B203B81B2A10C60020DAD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B203B71B2A10C60020DAD3 /* Images.xcassets */; };
 		50B203C71B2A10C60020DAD3 /* finalprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B203C61B2A10C60020DAD3 /* finalprojectTests.swift */; };
 		A6B30207EE8DE643AFCE4D05 /* libPods-finalproject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E64A61688723F8C29F5D9C /* libPods-finalproject.a */; };
@@ -65,6 +66,8 @@
 		508F647B1B2BA1FD003E4376 /* userA.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = userA.p12; sourceTree = "<group>"; };
 		508F647C1B2BA1FD003E4376 /* userA.crt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userA.crt; sourceTree = "<group>"; };
 		508F647D1B2BA1FD003E4376 /* userA.key */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = userA.key; sourceTree = "<group>"; };
+		508F64841B2BC50F003E4376 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		508F64851B2BC50F003E4376 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		50B203AB1B2A10C60020DAD3 /* finalproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B203AF1B2A10C60020DAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B203B71B2A10C60020DAD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -243,6 +246,15 @@
 			path = Certificates;
 			sourceTree = "<group>";
 		};
+		508F64831B2BC4F3003E4376 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				508F64841B2BC50F003E4376 /* Utils.h */,
+				508F64851B2BC50F003E4376 /* Utils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		50B203A21B2A10C60020DAD3 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +279,7 @@
 		50B203AD1B2A10C60020DAD3 /* finalproject */ = {
 			isa = PBXGroup;
 			children = (
+				508F64831B2BC4F3003E4376 /* Utils */,
 				508EFBE91B2B48A900C17D62 /* Runtime */,
 				508EFBE11B2B3FD500C17D62 /* Api */,
 				508EFBDE1B2B32F100C17D62 /* Base */,
@@ -458,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				508EFBE81B2B440900C17D62 /* MockApiClient.swift in Sources */,
+				508F64861B2BC50F003E4376 /* Utils.m in Sources */,
 				508EFBE31B2B42CF00C17D62 /* BaseApiClient.swift in Sources */,
 				508EFBDB1B2B32AF00C17D62 /* AppDelegate.swift in Sources */,
 				508EFBC81B2B321C00C17D62 /* ViewController.swift in Sources */,
