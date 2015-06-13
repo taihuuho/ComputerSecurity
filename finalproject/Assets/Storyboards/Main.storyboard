@@ -135,16 +135,17 @@
                         <outlet property="passwordTextField" destination="zHf-X5-hSb" id="SCQ-mI-tD9"/>
                         <outlet property="rsaButton" destination="KEj-bg-4Qo" id="AOh-eo-dS6"/>
                         <outlet property="userNameTextField" destination="iPc-7M-Ggo" id="lcn-fj-rib"/>
+                        <segue destination="YMK-AG-6HQ" kind="showDetail" identifier="ProfileViewController" id="ezo-Wz-hsV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="136"/>
+            <point key="canvasLocation" x="941" y="145"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="5yP-RB-Fx9">
             <objects>
-                <viewController id="YMK-AG-6HQ" customClass="ProfileViewController" customModule="finalproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="YMK-AG-6HQ" customClass="ProfileViewController" customModule="finalproject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vpg-ME-LwY"/>
                         <viewControllerLayoutGuide type="bottom" id="cKw-bV-PMy"/>
@@ -152,12 +153,32 @@
                     <view key="view" contentMode="scaleToFill" id="5lq-Dz-21I">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCt-w9-A6a">
+                                <rect key="frame" x="39" y="88" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAm-EY-uzY">
+                                <rect key="frame" x="40" y="129" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enu-GL-xi9">
+                                <rect key="frame" x="40" y="178" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.050980392159999999" green="0.81568627449999997" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gd-ts-bVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="837"/>
+            <point key="canvasLocation" x="1031" y="843"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TcC-3M-AhM">

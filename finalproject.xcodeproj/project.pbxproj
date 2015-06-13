@@ -29,6 +29,7 @@
 		50B203B81B2A10C60020DAD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B203B71B2A10C60020DAD3 /* Images.xcassets */; };
 		50B203C71B2A10C60020DAD3 /* finalprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B203C61B2A10C60020DAD3 /* finalprojectTests.swift */; };
 		50F806A61B2BD7180077C511 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F806A51B2BD7180077C511 /* User.swift */; };
+		50F806A91B2CC4D20077C511 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F806A81B2CC4D20077C511 /* RSA.m */; };
 		A6B30207EE8DE643AFCE4D05 /* libPods-finalproject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E64A61688723F8C29F5D9C /* libPods-finalproject.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		50B203C51B2A10C60020DAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B203C61B2A10C60020DAD3 /* finalprojectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalprojectTests.swift; sourceTree = "<group>"; };
 		50F806A51B2BD7180077C511 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		50F806A71B2CC4D20077C511 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		50F806A81B2CC4D20077C511 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		A2E64A61688723F8C29F5D9C /* libPods-finalproject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-finalproject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE94354F4CEE19F17EC4B4F6 /* Pods-finalproject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalproject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-finalproject/Pods-finalproject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +250,8 @@
 			children = (
 				508F64841B2BC50F003E4376 /* Utils.h */,
 				508F64851B2BC50F003E4376 /* Utils.m */,
+				50F806A71B2CC4D20077C511 /* RSA.h */,
+				50F806A81B2CC4D20077C511 /* RSA.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				508EFBEB1B2B48B900C17D62 /* Runtime.swift in Sources */,
 				508EFBE61B2B43F800C17D62 /* ApiClient.swift in Sources */,
 				508EFBDD1B2B32D000C17D62 /* ProfileViewController.swift in Sources */,
+				50F806A91B2CC4D20077C511 /* RSA.m in Sources */,
 				50F806A61B2BD7180077C511 /* User.swift in Sources */,
 				508EFBD91B2B32AF00C17D62 /* AppTextField.swift in Sources */,
 				508EFBDA1B2B32AF00C17D62 /* UIColor+App.swift in Sources */,

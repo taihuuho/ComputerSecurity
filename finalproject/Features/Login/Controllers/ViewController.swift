@@ -40,8 +40,9 @@ class ViewController: BaseViewController {
         user.userName = userNameTextField.text
         user.password = passwordTextField.text
         
-        user.signalLogin().subscribeNext({ (response : AnyObject!) -> Void in
-            
+        user.signalLogin().deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext({ (response : AnyObject!) -> Void in
+                self.performSegueWithIdentifier("ProfileViewController", sender: self)
+            print("Logged in successfully")
             }, error: { (error : NSError!) -> Void in
             
         })
