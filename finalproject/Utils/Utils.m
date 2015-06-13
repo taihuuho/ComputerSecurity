@@ -26,7 +26,7 @@
     NSData *p12Data = [[NSData alloc] initWithContentsOfFile:p12Path];
     
     
-    CFStringRef password = CFSTR("");
+    CFStringRef password = (__bridge CFStringRef)pw;
     const void *keys[] = { kSecImportExportPassphrase };
     const void *values[] = { password };
     CFDictionaryRef optionsDictionary = CFDictionaryCreate(NULL, keys, values, 1, NULL, NULL);

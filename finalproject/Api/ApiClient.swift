@@ -25,7 +25,7 @@ class ApiClient: BaseApiClient {
     
    
     func login(#account: String!, password: String!) -> RACSignal{
-        var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["account" : account, "password" : password])
+        var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : account, "password" : password])
         return enqueueRequest(request)
     }
     

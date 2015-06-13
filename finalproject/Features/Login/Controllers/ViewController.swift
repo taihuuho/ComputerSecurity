@@ -36,11 +36,11 @@ class ViewController: BaseViewController {
     
     @IBAction func didTouchedOnSubmitButton(sender: UIButton) {
         view.endEditing(true)
-        ApiClient.sharedInstance.login(account: userNameTextField.text, password: passwordTextField.text).subscribeNext({ (response : AnyObject!) -> Void in
-            
-            if let responseDict = response as? NSDictionary{
-                
-            }
+        let user =  User()
+        user.userName = userNameTextField.text
+        user.password = passwordTextField.text
+        
+        user.signalLogin().subscribeNext({ (response : AnyObject!) -> Void in
             
             }, error: { (error : NSError!) -> Void in
             
