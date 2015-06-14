@@ -9,14 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface JSRSA : NSObject
-{
-    SecKeyRef publicKey;
-    SecCertificateRef certificate;
-    SecPolicyRef policy;
-    SecTrustRef trust;
-    size_t maxPlainLen;
-}
-
 /*!
  * The public key file name
  */

@@ -40,49 +40,7 @@
     return keyPath;
 }
 
-- (void)setPublicKeyName:(NSString *)publicKeyName{
-    _publicKeyName = publicKeyName;
-    
-    NSString *publicKeyPath = [self publicKeyPath];
-    
-    if (publicKeyPath == nil) {
-        NSLog(@"Can not find pub.der");
-        return ;
-    }
-    
-    NSData *publicKeyFileContent = [NSData dataWithContentsOfFile:publicKeyPath];
-    if (publicKeyFileContent == nil) {
-        NSLog(@"Can not read from pub.der");
-        return ;
-    }
-    
-    certificate = SecCertificateCreateWithData(kCFAllocatorDefault, ( __bridge CFDataRef)publicKeyFileContent);
-    if (certificate == nil) {
-        NSLog(@"Can not read certificate from pub.der");
-        return ;
-    }
-    
-    policy = SecPolicyCreateBasicX509();
-    OSStatus returnCode = SecTrustCreateWithCertificates(certificate, policy, &trust);
-    if (returnCode != 0) {
-        NSLog(@"SecTrustCreateWithCertificates fail. Error Code: %d", (int)returnCode);
-        return ;
-    }
-    
-    SecTrustResultType trustResultType;
-    returnCode = SecTrustEvaluate(trust, &trustResultType);
-    if (returnCode != 0) {
-        return ;
-    }
-    
-    publicKey = SecTrustCopyPublicKey(trust);
-    if (publicKey == nil) {
-        NSLog(@"SecTrustCopyPublicKey fail");
-        return ;
-    }
-    
-    maxPlainLen = SecKeyGetBlockSize(publicKey) - 12;
-}
+
 
 #pragma mark - implementation
 - (NSString *)publicEncrypt:(NSString *)plainText
@@ -159,12 +117,7 @@
     return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
 }
 
-- (void)dealloc{
-    CFRelease(certificate);
-    CFRelease(trust);
-    CFRelease(policy);
-    CFRelease(publicKey);
-}
+
 
 
 #pragma mark - instance method
