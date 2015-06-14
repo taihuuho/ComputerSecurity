@@ -37,7 +37,18 @@ class User: NSObject {
                     self.phone = dict["phone"] as? String
                     self.address = dict["address"] as? String
                     
-                    self.firstName = JSRSA.sharedInstance().privateDecrypt(self.firstName)
+                    if Runtime.sharedInstance.useRSA == true{
+                        self.firstName = JSRSA.sharedInstance().privateDecrypt(self.firstName)
+                        self.lastName = JSRSA.sharedInstance().privateDecrypt(self.lastName)
+                        self.dob = JSRSA.sharedInstance().privateDecrypt(self.dob)
+                        self.creditCard = JSRSA.sharedInstance().privateDecrypt(self.creditCard)
+                        self.CVV = JSRSA.sharedInstance().privateDecrypt(self.CVV)
+                        self.SSN = JSRSA.sharedInstance().privateDecrypt(self.SSN)
+                        self.email = JSRSA.sharedInstance().privateDecrypt(self.email)
+                        self.phone = JSRSA.sharedInstance().privateDecrypt(self.phone)
+                        self.address = JSRSA.sharedInstance().privateDecrypt(self.address)
+                    }
+                    
                 }
                 
                 subscriber.sendNext(response)

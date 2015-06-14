@@ -18,8 +18,8 @@ class ApiClient: BaseApiClient {
     
     override init!(baseURL url: NSURL!) {
         super.init(baseURL: url)
-        JSRSA.sharedInstance().publicKey = "server_pub.pem"
-        JSRSA.sharedInstance().privateKey = "client_pri.pem"
+        JSRSA.sharedInstance().publicKeyName = "server_pub.pem"
+        JSRSA.sharedInstance().privateKeyName = "client_pri.pem"
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -59,9 +59,9 @@ class ApiClient: BaseApiClient {
    
     func login(#account: String!, password: String!) -> RACSignal{
         
-        let ac = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(account) : account
+        var ac = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncryptToString(account) : account
         
-        let pw = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(password) : password
+        let pw = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncryptToString(password) : password
         
         var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : ac, "password" : ac])
         return enqueueRequest(request)
