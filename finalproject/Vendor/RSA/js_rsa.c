@@ -135,7 +135,7 @@ char *js_public_encrypt(const char *plain_text, const char *public_key_path) {
         
         unsigned char *result_chunk = malloc(rsa_public_len + 1);
         
-        int result_length = RSA_public_encrypt(len, plain_chunk, result_chunk, rsa_publicKey, RSA_PKCS1_PADDING);
+        int result_length = RSA_public_encrypt(len, plain_chunk, result_chunk, rsa_publicKey, RSA_PKCS1_OAEP_PADDING);
         printf("Plain char len: %d\n", i);
         printf("Encrypted Result chunk: %s\nEncrypted Chunk length: %d\n", result_chunk, result_length);
         

@@ -66,6 +66,9 @@ class ViewController: BaseViewController {
             print("Logged in successfully")
             }, error: { (error : NSError!) -> Void in
             print(error.debugDescription)
+                let dialog = UIAlertView(title: "Error", message: error.localizedDescription, delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "OK")
+                
+                dialog.show()
         })
     }
     
