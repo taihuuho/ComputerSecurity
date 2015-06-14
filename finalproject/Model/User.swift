@@ -24,7 +24,19 @@ class User: NSObject {
     func signalLogin() -> RACSignal{
         let signal = RACSignal.createSignal { (subscriber : RACSubscriber!) -> RACDisposable! in
             
-            ApiClient.sharedInstance.login(account: self.userName, password: self.password).subscribeNext({ (response : AnyObject!) -> Void in
+            ApiClient.sharedInstance().login(account: self.userName, password: self.password).subscribeNext({ (response : AnyObject!) -> Void in
+                
+                if let dict = response["data"] as? NSDictionary{
+                    self.firstName = dict["firstName"] as? String
+                    self.lastName = dict["lastName"] as? String
+                    self.dob = dict["dob"] as? String
+                    self.creditCard = dict["creditCard"] as? String
+                    self.CVV = dict["cvv"] as? String
+                    self.SSN = dict["ssn"] as? String
+                    self.email = dict["email"] as? String
+                    self.phone = dict["phone"] as? String
+                    self.address = dict["address"] as? String
+                }
                 
                 subscriber.sendNext(response)
                 subscriber.sendCompleted()

@@ -8,19 +8,42 @@
 
 import UIKit
 
+enum ApiProtocolType : Int{
+    case HTTP = 0
+    case HTTPs
+}
+
 class ApiClient: BaseApiClient {
     
     // MARK: API INTERFACE INSTANCE
-    class var sharedInstance : ApiClient {
+    
+    class var httpsInstance : ApiClient {
         struct Static {
             static let instance : ApiClient = ApiClient(baseURL: NSURL(string: "https://huung:443"))
         }
         return Static.instance
     }
+    
+    class var hhtpInstance : ApiClient {
+        struct Static {
+            static let instance : ApiClient = ApiClient(baseURL: NSURL(string: "http://huung:3000"))
+        }
+        return Static.instance
+    }
+    
+    class func sharedInstance() -> ApiClient{
+        
+        if Runtime.sharedInstance.apiProtocolType == .HTTP{
+            return ApiClient.hhtpInstance
+        }else{
+            return ApiClient.httpsInstance
+        }
+    }
+    
 
     // add header fields
     override func configureRequest(request: NSMutableURLRequest) {
-        request.addValue("1", forHTTPHeaderField: "isRSA")
+        request.addValue("true", forHTTPHeaderField: "isRSA")
     }
     
    

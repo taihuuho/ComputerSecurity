@@ -21,6 +21,22 @@ class ViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+//        RACObserve(Runtime.sharedInstance, "apiProtocolType").subscribeNext({ (a : AnyObject!) -> Void in
+//            
+//        })
+        
+//        /print(Runtime.sharedInstance.valueForKey("apiProtocolType"))
+//        RACObserve(Runtime.sharedInstance, "apiProtocolType").subscribeNextAs { (type : ApiProtocolType) -> () in
+////            if type == ApiProtocolType.HTTPS{
+////                self.httpsButton.selected = true
+////                self.httpButton.selected = false
+////            }else{
+////                self.httpsButton.selected = false
+////                self.httpButton.selected = true
+////            }
+//            
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +47,8 @@ class ViewController: BaseViewController {
     @IBAction func didTouchedOnCheckButton(sender: UIButton) {
         
         sender.selected = !sender.selected
+        Runtime.sharedInstance.apiProtocolType = httpsButton.selected ? .HTTPs : .HTTP
+        Runtime.sharedInstance.useRSA = rsaButton.selected
         
     }
     
@@ -41,10 +59,13 @@ class ViewController: BaseViewController {
         user.password = passwordTextField.text
         
         user.signalLogin().deliverOn(RACScheduler.mainThreadScheduler()).subscribeNext({ (response : AnyObject!) -> Void in
-                self.performSegueWithIdentifier("ProfileViewController", sender: self)
+            
+            Runtime.sharedInstance.user = user
+            self.performSegueWithIdentifier("ProfileViewController", sender: self)
+            
             print("Logged in successfully")
             }, error: { (error : NSError!) -> Void in
-            
+            print(error.debugDescription)
         })
     }
     

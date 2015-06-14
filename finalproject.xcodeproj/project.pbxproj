@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505CAD5E1B2CDF5F00A50D2E /* RACSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505CAD5D1B2CDF5F00A50D2E /* RACSupport.swift */; };
 		508EFBC81B2B321C00C17D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EFBC31B2B321C00C17D62 /* ViewController.swift */; };
 		508EFBD51B2B32AF00C17D62 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508EFBCB1B2B32AF00C17D62 /* check@2x.png */; };
 		508EFBD61B2B32AF00C17D62 /* uncheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508EFBCC1B2B32AF00C17D62 /* uncheck@2x.png */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		00A92A846046EAE2824DCEEA /* Pods-finalproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalproject.release.xcconfig"; path = "Pods/Target Support Files/Pods-finalproject/Pods-finalproject.release.xcconfig"; sourceTree = "<group>"; };
+		505CAD5D1B2CDF5F00A50D2E /* RACSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACSupport.swift; sourceTree = "<group>"; };
 		508EFBC31B2B321C00C17D62 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		508EFBCB1B2B32AF00C17D62 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		508EFBCC1B2B32AF00C17D62 /* uncheck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uncheck@2x.png"; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				508F64851B2BC50F003E4376 /* Utils.m */,
 				50F806A71B2CC4D20077C511 /* RSA.h */,
 				50F806A81B2CC4D20077C511 /* RSA.m */,
+				505CAD5D1B2CDF5F00A50D2E /* RACSupport.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505CAD5E1B2CDF5F00A50D2E /* RACSupport.swift in Sources */,
 				508EFBE81B2B440900C17D62 /* MockApiClient.swift in Sources */,
 				508F64861B2BC50F003E4376 /* Utils.m in Sources */,
 				508EFBE31B2B42CF00C17D62 /* BaseApiClient.swift in Sources */,
