@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-7M-Ggo" customClass="AppTextField" customModule="finalproject" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hung" placeholder="User name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-7M-Ggo" customClass="AppTextField" customModule="finalproject" customModuleProvider="target">
                                 <rect key="frame" x="227" y="134" width="146" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="n6U-fW-ECa"/>
@@ -29,7 +29,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="2fB-u1-fu0"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-X5-hSb" customClass="AppTextField" customModule="finalproject" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hung" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-X5-hSb" customClass="AppTextField" customModule="finalproject" customModuleProvider="target">
                                 <rect key="frame" x="227" y="174" width="146" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8AN-iZ-HwE"/>

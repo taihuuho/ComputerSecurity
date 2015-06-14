@@ -36,6 +36,8 @@ class User: NSObject {
                     self.email = dict["email"] as? String
                     self.phone = dict["phone"] as? String
                     self.address = dict["address"] as? String
+                    
+                    self.firstName = JSRSA.sharedInstance().privateDecrypt(self.firstName)
                 }
                 
                 subscriber.sendNext(response)

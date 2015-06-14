@@ -12,6 +12,9 @@
 		50255D701B2D197800E401F9 /* JSRSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 50255D6A1B2D197800E401F9 /* JSRSA.m */; };
 		50255D711B2D197800E401F9 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50255D6C1B2D197800E401F9 /* libcrypto.a */; };
 		50255D721B2D197800E401F9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50255D6D1B2D197800E401F9 /* libssl.a */; };
+		50255D741B2D2D1500E401F9 /* server_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50255D731B2D2D1500E401F9 /* server_pub.pem */; };
+		50255D7A1B2D359B00E401F9 /* server_pri.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50255D791B2D359B00E401F9 /* server_pri.pem */; };
+		50255D7C1B2D362800E401F9 /* client_pri.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50255D7B1B2D362800E401F9 /* client_pri.pem */; };
 		505CAD5E1B2CDF5F00A50D2E /* RACSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505CAD5D1B2CDF5F00A50D2E /* RACSupport.swift */; };
 		508EFBC81B2B321C00C17D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EFBC31B2B321C00C17D62 /* ViewController.swift */; };
 		508EFBD51B2B32AF00C17D62 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508EFBCB1B2B32AF00C17D62 /* check@2x.png */; };
@@ -27,7 +30,6 @@
 		508EFBE61B2B43F800C17D62 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EFBE51B2B43F800C17D62 /* ApiClient.swift */; };
 		508EFBE81B2B440900C17D62 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EFBE71B2B440900C17D62 /* MockApiClient.swift */; };
 		508EFBEB1B2B48B900C17D62 /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EFBEA1B2B48B900C17D62 /* Runtime.swift */; };
-		508F647F1B2BA1FD003E4376 /* g3.pub in Resources */ = {isa = PBXBuildFile; fileRef = 508F647A1B2BA1FD003E4376 /* g3.pub */; };
 		508F64801B2BA1FD003E4376 /* user.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 508F647B1B2BA1FD003E4376 /* user.p12 */; };
 		508F64861B2BC50F003E4376 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 508F64851B2BC50F003E4376 /* Utils.m */; };
 		50B203B81B2A10C60020DAD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B203B71B2A10C60020DAD3 /* Images.xcassets */; };
@@ -131,6 +133,9 @@
 		50255D6A1B2D197800E401F9 /* JSRSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRSA.m; sourceTree = "<group>"; };
 		50255D6C1B2D197800E401F9 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		50255D6D1B2D197800E401F9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		50255D731B2D2D1500E401F9 /* server_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = server_pub.pem; sourceTree = "<group>"; };
+		50255D791B2D359B00E401F9 /* server_pri.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = server_pri.pem; sourceTree = "<group>"; };
+		50255D7B1B2D362800E401F9 /* client_pri.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = client_pri.pem; sourceTree = "<group>"; };
 		505CAD5D1B2CDF5F00A50D2E /* RACSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACSupport.swift; sourceTree = "<group>"; };
 		508EFBC31B2B321C00C17D62 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		508EFBCB1B2B32AF00C17D62 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
@@ -147,7 +152,6 @@
 		508EFBE51B2B43F800C17D62 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		508EFBE71B2B440900C17D62 /* MockApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
 		508EFBEA1B2B48B900C17D62 /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
-		508F647A1B2BA1FD003E4376 /* g3.pub */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = g3.pub; sourceTree = "<group>"; };
 		508F647B1B2BA1FD003E4376 /* user.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = user.p12; sourceTree = "<group>"; };
 		508F64841B2BC50F003E4376 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		508F64851B2BC50F003E4376 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
@@ -444,7 +448,9 @@
 		508F64761B2B9FC6003E4376 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
-				508F647A1B2BA1FD003E4376 /* g3.pub */,
+				50255D7B1B2D362800E401F9 /* client_pri.pem */,
+				50255D791B2D359B00E401F9 /* server_pri.pem */,
+				50255D731B2D2D1500E401F9 /* server_pub.pem */,
 				508F647B1B2BA1FD003E4376 /* user.p12 */,
 			);
 			path = Certificates;
@@ -624,10 +630,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50255D7A1B2D359B00E401F9 /* server_pri.pem in Resources */,
+				50255D7C1B2D362800E401F9 /* client_pri.pem in Resources */,
+				50255D741B2D2D1500E401F9 /* server_pub.pem in Resources */,
 				508EFBD71B2B32AF00C17D62 /* LaunchScreen.xib in Resources */,
 				508EFBD81B2B32AF00C17D62 /* Main.storyboard in Resources */,
 				50B203B81B2A10C60020DAD3 /* Images.xcassets in Resources */,
-				508F647F1B2BA1FD003E4376 /* g3.pub in Resources */,
 				508F64801B2BA1FD003E4376 /* user.p12 in Resources */,
 				508EFBD61B2B32AF00C17D62 /* uncheck@2x.png in Resources */,
 				508EFBD51B2B32AF00C17D62 /* check@2x.png in Resources */,

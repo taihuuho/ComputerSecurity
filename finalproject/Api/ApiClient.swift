@@ -18,8 +18,8 @@ class ApiClient: BaseApiClient {
     
     override init!(baseURL url: NSURL!) {
         super.init(baseURL: url)
-        JSRSA.sharedInstance().publicKey = "g3.pub"
-        
+        JSRSA.sharedInstance().publicKey = "server_pub.pem"
+        JSRSA.sharedInstance().privateKey = "client_pri.pem"
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -60,6 +60,7 @@ class ApiClient: BaseApiClient {
     func login(#account: String!, password: String!) -> RACSignal{
         
         let ac = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(account) : account
+        
         let pw = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(password) : password
         
         var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : ac, "password" : ac])
