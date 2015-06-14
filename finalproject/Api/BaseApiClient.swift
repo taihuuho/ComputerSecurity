@@ -92,7 +92,7 @@ class BaseApiClient: AFHTTPRequestOperationManager {
                 
                 }else if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodClientCertificate{
 
-                    let credential = Utils.sharedInstance().credentialWithP21File("userA", password: "client")
+                    let credential = Utils.sharedInstance().credentialWithP21File("user", password: "client")
                     if credential != nil{
                         challenge.sender.useCredential(credential, forAuthenticationChallenge: challenge)
                     }else{

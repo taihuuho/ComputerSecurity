@@ -15,6 +15,16 @@ enum ApiProtocolType : Int{
 
 class ApiClient: BaseApiClient {
     
+    
+    override init!(baseURL url: NSURL!) {
+        super.init(baseURL: url)
+        JSRSA.sharedInstance().publicKey = "g3.pub"
+        
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     // MARK: API INTERFACE INSTANCE
     
     class var httpsInstance : ApiClient {
@@ -43,12 +53,16 @@ class ApiClient: BaseApiClient {
 
     // add header fields
     override func configureRequest(request: NSMutableURLRequest) {
-        request.addValue("true", forHTTPHeaderField: "isRSA")
+        request.addValue(Runtime.sharedInstance.useRSA == true ? "true" : "false", forHTTPHeaderField: "isRSA")
     }
     
    
     func login(#account: String!, password: String!) -> RACSignal{
-        var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : account, "password" : password])
+        
+        let ac = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(account) : account
+        let pw = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(password) : password
+        
+        var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : ac, "password" : ac])
         return enqueueRequest(request)
     }
     
