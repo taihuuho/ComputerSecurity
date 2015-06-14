@@ -125,47 +125,7 @@
     return [NSString stringWithUTF8String:plainText];
 }
 
-- (NSData *) publicEncryptWithData:(NSData *)content {
-    
-    size_t plainLen = [content length];
-    if (plainLen > maxPlainLen) {
-        NSLog(@"content(%ld) is too long, must < %ld", plainLen, maxPlainLen);
-        return nil;
-    }
-    
-    void *plain = malloc(plainLen);
-    [content getBytes:plain
-               length:plainLen];
-    
-    size_t cipherLen = 128; // currently RSA key length is set to 128 bytes
-    void *cipher = malloc(cipherLen);
-    
-    OSStatus returnCode = SecKeyEncrypt(publicKey, kSecPaddingPKCS1, plain,
-                                        plainLen, cipher, &cipherLen);
-    
-    NSData *result = nil;
-    if (returnCode != 0) {
-        NSLog(@"SecKeyEncrypt fail. Error Code: %d", (int)returnCode);
-    }
-    else {
-        result = [NSData dataWithBytes:cipher
-                                length:cipherLen];
-    }
-    
-    free(plain);
-    free(cipher);
-    
-    return result;
-}
 
-- (NSData *) publicEncryptWithString:(NSString *)content {
-    return [self publicEncryptWithData:[content dataUsingEncoding:NSUTF8StringEncoding]];
-}
-
-- (NSString *) publicEncryptToString:(NSString *)content {
-    NSData *data = [self publicEncryptWithString:content];
-    return [self base64forData:data];
-}
 
 // convert NSData to NSString
 - (NSString*)base64forData:(NSData*)theData {

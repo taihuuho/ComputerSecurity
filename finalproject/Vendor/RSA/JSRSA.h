@@ -32,11 +32,6 @@
 - (NSString *)privateEncrypt:(NSString *)plainText;
 - (NSString *)publicDecrypt:(NSString *)cipherText;
 
-
-- (NSData *) publicEncryptWithData:(NSData *)content;
-- (NSData *) publicEncryptWithString:(NSString *)content;
-- (NSString *) publicEncryptToString:(NSString *)content;
-
 + (JSRSA *)sharedInstance;
 
 @end

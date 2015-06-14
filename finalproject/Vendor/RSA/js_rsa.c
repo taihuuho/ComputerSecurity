@@ -55,7 +55,7 @@ char *js_private_decrypt(const char *cipher_text, const char *private_key_path) 
         printf("Crypt chunk: %s\n", crypt_chunk);
         
         unsigned char *result_chunk = malloc(crypt_len + 1);
-        int result_length = RSA_private_decrypt(rsa_private_len, crypt_chunk, result_chunk, rsa_privateKey, RSA_PKCS1_PADDING);
+        int result_length = RSA_private_decrypt(rsa_private_len, crypt_chunk, result_chunk, rsa_privateKey, RSA_PKCS1_OAEP_PADDING);
         // chunk length should be the size of privatekey (in bytes) minus 11 (overhead during encryption)
         printf("Result chunk: %s\nChunk length: %d\n", result_chunk, result_length);
         

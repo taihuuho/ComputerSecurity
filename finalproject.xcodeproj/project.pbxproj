@@ -14,6 +14,7 @@
 		50255D721B2D197800E401F9 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50255D6D1B2D197800E401F9 /* libssl.a */; };
 		50255D741B2D2D1500E401F9 /* server_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50255D731B2D2D1500E401F9 /* server_pub.pem */; };
 		50255D7C1B2D362800E401F9 /* client_pri.pem in Resources */ = {isa = PBXBuildFile; fileRef = 50255D7B1B2D362800E401F9 /* client_pri.pem */; };
+		50255D7E1B2DFEB000E401F9 /* server_pub.der in Resources */ = {isa = PBXBuildFile; fileRef = 50255D7D1B2DFEB000E401F9 /* server_pub.der */; };
 		505CAD5E1B2CDF5F00A50D2E /* RACSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505CAD5D1B2CDF5F00A50D2E /* RACSupport.swift */; };
 		508EFBC81B2B321C00C17D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508EFBC31B2B321C00C17D62 /* ViewController.swift */; };
 		508EFBD51B2B32AF00C17D62 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508EFBCB1B2B32AF00C17D62 /* check@2x.png */; };
@@ -134,6 +135,7 @@
 		50255D6D1B2D197800E401F9 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		50255D731B2D2D1500E401F9 /* server_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = server_pub.pem; sourceTree = "<group>"; };
 		50255D7B1B2D362800E401F9 /* client_pri.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = client_pri.pem; sourceTree = "<group>"; };
+		50255D7D1B2DFEB000E401F9 /* server_pub.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = server_pub.der; sourceTree = "<group>"; };
 		505CAD5D1B2CDF5F00A50D2E /* RACSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RACSupport.swift; sourceTree = "<group>"; };
 		508EFBC31B2B321C00C17D62 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		508EFBCB1B2B32AF00C17D62 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 		508F64761B2B9FC6003E4376 /* Certificates */ = {
 			isa = PBXGroup;
 			children = (
+				50255D7D1B2DFEB000E401F9 /* server_pub.der */,
 				50255D7B1B2D362800E401F9 /* client_pri.pem */,
 				50255D731B2D2D1500E401F9 /* server_pub.pem */,
 				508F647B1B2BA1FD003E4376 /* user.p12 */,
@@ -627,6 +630,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50255D7E1B2DFEB000E401F9 /* server_pub.der in Resources */,
 				50255D7C1B2D362800E401F9 /* client_pri.pem in Resources */,
 				50255D741B2D2D1500E401F9 /* server_pub.pem in Resources */,
 				508EFBD71B2B32AF00C17D62 /* LaunchScreen.xib in Resources */,

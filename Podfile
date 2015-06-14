@@ -6,6 +6,7 @@ target 'finalproject' do
 pod 'AFNetworking'
 pod 'TYMActivityIndicatorView'
 pod 'ReactiveCocoa'
+#pod 'OpenSSL'
 
 end
 

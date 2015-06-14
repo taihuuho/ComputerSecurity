@@ -59,12 +59,15 @@ class ApiClient: BaseApiClient {
    
     func login(#account: String!, password: String!) -> RACSignal{
         
-        var ac = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncryptToString(account) : account
+        var ac = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(account) : account
         
-        let pw = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncryptToString(password) : password
+        let pw = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(password) : password
         
+        if (ac != nil){
         var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : ac, "password" : ac])
         return enqueueRequest(request)
+        }
+        return enqueueRequest(NSURLRequest())
     }
     
 }
