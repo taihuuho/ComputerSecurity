@@ -25,6 +25,7 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationItem.hidesBackButton = true
         
         self.firstNameLabel.text = Runtime.sharedInstance.user?.firstName
         self.lastNameLabel.text = Runtime.sharedInstance.user?.lastName
