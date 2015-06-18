@@ -63,9 +63,9 @@ class ApiClient: BaseApiClient {
         
         let pw = Runtime.sharedInstance.useRSA == true ? JSRSA.sharedInstance().publicEncrypt(password) : password
         
-        if (ac != nil){
-        var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : ac, "password" : ac])
-        return enqueueRequest(request)
+        if (ac != nil && pw != nil){
+            var request = requestWithMethod(method: APIMethod.POST, path: "login", parameters: ["username" : ac, "password" : pw])
+            return enqueueRequest(request)
         }
         return enqueueRequest(NSURLRequest())
     }
